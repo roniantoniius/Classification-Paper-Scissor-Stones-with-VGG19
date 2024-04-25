@@ -1,21 +1,21 @@
-# Klasifikasi-Kertas-Gunting-Batu-dengan-VGG19
+# Classification-Paper-Gunting-Stone-with-VGG19
 1. Business Understanding
-Dalam tahap ini, tujuan bisnis dari proyek adalah untuk mengklasifikasikan gambar-gambar tangan yang menggambarkan gunting, batu, atau kertas. Ini dapat digunakan dalam aplikasi permainan sederhana atau pengenalan gestur tangan untuk kontrol perangkat. Dataset telah dipersiapkan dengan membagi gambar-gambar ke dalam folder train dan validation, masing-masing dengan proporsi 60% dan 40%. Totalnya, ada 1314 gambar untuk pelatihan dan 874 gambar untuk validasi.
+In this stage, the business objective of the project is to classify hand drawings depicting scissors, stones, or paper. This can be used in simple game applications or hand gesture recognition for device control. The dataset has been prepared by dividing the images into train and validation folders, with proportions of 60% and 40%, respectively. In total, there are 1314 images for training and 874 images for validation.
 
 2. Data Collecting
-Kode ini digunakan untuk mengunduh dataset yang diperlukan untuk proyek dari repositori GitHub. Dataset ini berisi gambar-gambar tangan yang digunakan untuk klasifikasi.
+This code is used to download the dataset required for the project from the GitHub repository. This dataset contains the hand images used for classification.
 
 3. Data Understanding:
-Proses ini melibatkan ekstraksi dataset dari file zip yang telah diunduh sebelumnya. Dataset terdiri dari gambar-gambar tangan yang mewakili gunting, batu, dan kertas. Gambar-gambar ini kemudian dibagi menjadi folder train dan validation untuk keperluan pelatihan dan evaluasi model.
+This process involves extracting the dataset from the previously downloaded zip file. The dataset consists of hand images representing scissors, stone, and paper. These images were then divided into train and validation folders for training and model evaluation purposes.
 
 4. Data Preprocessing:
-Pada tahap ini, gambar-gambar yang telah dimuat diolah menggunakan augmentasi data untuk meningkatkan variasi dataset pelatihan. Augmentasi ini termasuk rotasi, pergeseran horizontal dan vertikal, pemotongan, dan pembalikan. Ini membantu model untuk belajar dari berbagai variasi gambar.
+At this stage, the loaded images were processed using data augmentation to increase the variety of the training dataset. This augmentation includes rotation, horizontal and vertical shifting, cropping, and flipping. This helps the model to learn from a wide variety of images.
 
-5. Modelling:
-Arsitektur model yang digunakan adalah VGG19, yang telah dilatih sebelumnya pada dataset ImageNet. Transfer learning dilakukan dengan memanfaatkan bobot yang sudah dilatih pada VGG19 dan mengganti lapisan terakhir untuk sesuai dengan tugas klasifikasi tangan. Model diikuti dengan beberapa lapisan Dense untuk pembelajaran lebih lanjut.
+5. Modeling:
+The model architecture used was VGG19, which was pre-trained on the ImageNet dataset. Transfer learning is done by utilizing the weights already trained on VGG19 and replacing the last layer to suit the hand classification task. The model is followed by multiple Dense layers for further learning.
 
 6. Evaluation:
-Model dievaluasi menggunakan dataset validasi untuk memperkirakan kinerja model. Metric yang digunakan adalah akurasi. Selain itu, visualisasi grafik akurasi dan loss dari pelatihan dan validasi juga disajikan untuk memahami tren performa model.
+The model was evaluated using a validation dataset to estimate the performance of the model. The metric used is accuracy. In addition, graphical visualization of accuracy and loss from training and validation is also presented to understand the trend of model performance.
 
 7. Test:
-Terakhir, pengguna dapat mengunggah gambar tangan yang ingin diklasifikasikan oleh model. Model akan memproses gambar tersebut dan memberikan prediksi kelas yang sesuai (scissors, rock, atau paper). Ini memungkinkan pengguna untuk menguji model secara langsung dengan gambar-gambar baru.
+Finally, the user can upload a hand image that the model wants to classify. The model will process the image and provide the corresponding class prediction (scissors, rock, or paper). This allows users to test the model directly with new images.
